@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		3F0F969D261CF72B0079282F /* GithubActionsTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F969B261CF72B0079282F /* GithubActionsTestApp.xcdatamodeld */; };
 		3F0F96A8261CF72B0079282F /* GithubActionsTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F96A7261CF72B0079282F /* GithubActionsTestAppTests.swift */; };
 		3F0F96B3261CF72B0079282F /* GithubActionsTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F96B2261CF72B0079282F /* GithubActionsTestAppUITests.swift */; };
+		3F3B29B62620CB3600A13974 /* CallbackHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 3F3B29B52620CB3600A13974 /* CallbackHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3B29B62620CB3600A13974 /* CallbackHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = GithubActionsTestApp;
+			packageProductDependencies = (
+				3F3B29B52620CB3600A13974 /* CallbackHelper */,
+			);
 			productName = GithubActionsTestApp;
 			productReference = 3F0F968D261CF7290079282F /* GithubActionsTestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 3F0F9684261CF7290079282F;
+			packageReferences = (
+				3F3B29B42620CB3600A13974 /* XCRemoteSwiftPackageReference "CallbackHelper" */,
+			);
 			productRefGroup = 3F0F968E261CF7290079282F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F3B29B42620CB3600A13974 /* XCRemoteSwiftPackageReference "CallbackHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jstnheo/CallbackHelper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F3B29B52620CB3600A13974 /* CallbackHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F3B29B42620CB3600A13974 /* XCRemoteSwiftPackageReference "CallbackHelper" */;
+			productName = CallbackHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3F0F969B261CF72B0079282F /* GithubActionsTestApp.xcdatamodeld */ = {
