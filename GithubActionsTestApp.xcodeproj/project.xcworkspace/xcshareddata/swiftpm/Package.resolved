@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CallbackHelper",
+        "repositoryURL": "https://github.com/jstnheo/CallbackHelper.git",
+        "state": {
+          "branch": null,
+          "revision": "d452e07a64f2e17b0823c2077a885f5e2605f1b8",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

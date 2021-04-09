@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CallbackHelper
 
 @main
 struct GithubActionsTestAppApp: App {
