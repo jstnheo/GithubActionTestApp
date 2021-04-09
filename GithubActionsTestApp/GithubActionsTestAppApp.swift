@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Added comment
+
 @main
 struct GithubActionsTestAppApp: App {
     let persistenceController = PersistenceController.shared
