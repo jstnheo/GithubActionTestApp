@@ -7,13 +7,22 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_12.4.app
+
+    - name: Xcode Version
+      run: /usr/bin/xcodebuild -Version
+
+    - name: Run unit tests
+      run: xcodebuild test -scheme GithubActionsTest -workspace GithubActionsTest.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.2' | xcpretty && exit ${PIPESTATUS[0]}
+
+
+
+
