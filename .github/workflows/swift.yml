@@ -11,14 +11,20 @@ jobs:
 
     runs-on: macos-latest
 
+    strategy:
+      matrix:
+        run-config:
+          - { scheme: 'GithubActionsTestApp', destination: 'platform=iOS Simulator,OS=13.4.1,name=iPhone 8' }
+
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout Project
+      uses: actions/checkout@v2
 
-    - name: Run Swift Test
-      run: swift test
-      env:
-          DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
+    - name: Homebrew build helpers install
+      run: brew bundle
 
+    - name: build and test
+      run: xcodebuild clean test -scheme '${{ matrix.run-config['scheme'] }}' -destination '${{ matrix.run-config['destination'] }}' -showBuildTimingSummary
 
 
 
