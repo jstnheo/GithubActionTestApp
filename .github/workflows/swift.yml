@@ -14,12 +14,12 @@ jobs:
     strategy:
       matrix:
         run-config:
-          - { scheme: 'GithubActionsTestApp', destination: 'platform=iOS Simulator,OS=13.4.1,name=iPhone 8' }
+          - { scheme: 'GithubActionsTestApp', destination: 'platform=iOS Simulator,OS=14.4,name=iPhone 12 Pro' }
 
     steps:
     - name: Checkout Project
       uses: actions/checkout@v2
-      
+
     - name: build and test
       run: xcodebuild clean test -scheme '${{ matrix.run-config['scheme'] }}' -destination '${{ matrix.run-config['destination'] }}' -showBuildTimingSummary
 
